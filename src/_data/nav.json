@@ -1,0 +1,23 @@
+
+[
+  {
+    "name": "Home",
+    "url": "/"
+  },
+  {
+    "name": "Contact",
+    "url": "/contact/"
+  },
+  {
+    "name": "Gallery",
+    "url": "/gallery/"
+  },
+  {
+    "name": "Data",
+    "url": "/eleventy-data/"
+  },
+  {
+    "name": "Archive",
+    "url": "/archive/"
+  }
+]

@@ -1,0 +1,64 @@
+@import 'reset.css';
+
+.wrapper {
+    inline-size: min(100% - 2rem, 60ch);
+    margin-inline: auto;
+}
+body {
+    background-color: #ecf4fa;
+    color: #111;
+
+    & > * {
+        padding-block: 2em;
+    }
+
+    & > header {
+        background-color: lightsteelblue;
+    }
+
+    & > main {
+        background-color: #eee;
+    }
+
+    & > footer {
+        background-color: lightsteelblue;
+    }
+}
+code {
+    background-color: #ddd;
+    color: #000;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dt, dd {
+    display: inline;
+}
+
+[aria-current="page"] {
+    background-color: lightcoral;
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tag-cloud > * {
+    padding: 0px 4px;
+    background-color: #222;
+    color: pink;
+    border-radius: 3px;
+}
+
+.tag-cloud a {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+}
