@@ -109,5 +109,5 @@ nav[aria-label="Previous and/or next page"] {
   grid-column-start: 1;
 }
 .post-next {
-  grid-column: 2;
+  grid-column-start: 2;
 }
