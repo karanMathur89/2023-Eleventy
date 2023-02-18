@@ -4,6 +4,11 @@
   inline-size: min(100% - 2rem, 60ch);
   margin-inline: auto;
 }
+
+mark {
+  background-color: palegoldenrod;
+}
+
 body {
   background-color: #ecf4fa;
   color: #111;
@@ -76,4 +81,31 @@ nav[aria-label="Previous and/or next page"] {
 
 .post-next {
   grid-column-start: 2;
+}
+
+.tag-catg {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  flex-wrap: wrap;
+  text-decoration: none;
+
+  & a {
+    text-decoration: none;
+    color: hotpink;
+  }
+}
+
+[aria-hidden="true"] {
+  display: inline-grid;
+  place-items: center;
+  background-color: hotpink;
+  color: rgb(236, 214, 225);
+  font-size: 0.9rem;
+  font-weight: bold;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  border-radius: 100vh;
+  /* border: 2px solid #222; */
+
 }

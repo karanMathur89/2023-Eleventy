@@ -2,8 +2,6 @@
 layout: 'layouts/base.njk'
 ---
 
-<h2>Post</h2>
-<h3>Tag Cloud</h3>
 <ul class="tag-cloud">
   {% for tag in tags %}
     <li>
@@ -11,7 +9,13 @@ layout: 'layouts/base.njk'
     </li>
   {% endfor %}
 </ul>
+
+{% if content %}
+<strong><code>{{content | safe | striptags(true)| wordcount }}</code> words</strong>
+{% endif %}
+
 {{ content | safe }}
+
 {% set previousPost = collections.post | getPreviousCollectionItem %}
 {% set nextPost = collections.post | getNextCollectionItem %}
 <nav aria-label="Previous and/or next page">
