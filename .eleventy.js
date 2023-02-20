@@ -1,8 +1,11 @@
 //* Import Collections
-const { getPosts } = require('./config/collections/index.js');
+const { getPosts } = require('./config/collections/index.js')
 
 //* Import Plugins
 const markdownLib = require('./config/plugins/markdown.js')
+
+//* Import Shortcodes
+const imageShortcode = require('./config/shortcodes/index.js')
 
 
 /**
@@ -23,6 +26,11 @@ module.exports = function (eleventyConfig) {
 
     //Collections
     eleventyConfig.addCollection("post", getPosts)
+
+
+
+    //Shortcodes
+    eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode)
 
 
 
