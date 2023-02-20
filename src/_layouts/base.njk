@@ -5,14 +5,16 @@
         {% block head %}{% endblock %}
     </head>
     <body>
-        <nav class="wrapper">
-            <ul>
-                {% for item in nav %}
-                    <li {% if page.url == item.url %} aria-current="page" {% endif %}>
-                        <a href="{{ item.url }}">{{ item.name }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
+        <nav>
+            <div class="wrapper">
+                <ul>
+                    {% for item in nav %}
+                        <li {% if page.url == item.url %} aria-current="page" {% endif %}>
+                            <a href="{{ item.url }}">{{ item.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </nav>
         <header>
             <div class="wrapper">

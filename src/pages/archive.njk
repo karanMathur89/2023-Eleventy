@@ -2,17 +2,13 @@
 title: Archive
 ---
 
-<ul class="tag-catg">
+<ul class="tags-list">
   {% for tag, posts in collections | dictsort %}
   {% if tag !== "all" and tag !== "post" %}
     <li><a href="/tags/{{tag}}/">{{tag}} <span aria-hidden="true">{{posts.length}}</span></a></li>
   {% endif %}
   {% endfor %}
 </ul>
-
-<br>
-<hr>
-<br>
 
 <ul>
 

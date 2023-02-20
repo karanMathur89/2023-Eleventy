@@ -10,28 +10,37 @@ mark {
 }
 
 body {
-  background-color: #ecf4fa;
   color: #111;
+
+  display: flex;
+  flex-direction: column;
 
   & > * {
     padding-block: 2em;
   }
 
+  & > nav {
+    background-color: #d0ebff;
+  }
+
   & > header {
-    background-color: lightsteelblue;
+    background-color: #e7f5ff;
   }
 
   & > main {
-    background-color: #eee;
+    background-color: #d0ebff;
   }
 
   & > footer {
-    background-color: lightsteelblue;
+    background-color: #e7f5ff;
+    margin-block-start: auto;
   }
 }
 code {
-  background-color: #ddd;
-  color: #000;
+  background-color: #e7f5ff;
+  color: #333;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 
 dt {
@@ -44,7 +53,7 @@ dd {
 }
 
 [aria-current="page"] {
-  background-color: lightcoral;
+  background-color: #74c0fc;
 }
 
 .tag-cloud {
@@ -53,13 +62,13 @@ dd {
   gap: 1rem;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding:0;
 }
 
 .tag-cloud > * {
   padding: 0px 4px;
-  background-color: #ccc;
-  color: darkslategray;
+  background-color: #e7f5ff;
+  color: #1864ab;
   border-radius: 3px;
 }
 
@@ -73,41 +82,49 @@ nav[aria-label="Previous and/or next page"] {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center; */
 }
 
 .post-previous {
   grid-column-start: 1;
+  /* margin-right: auto; */
 }
 
 .post-next {
   grid-column-start: 2;
+  /* margin-left: auto; */
 }
 
-.tag-catg {
-  display: flex;
+.tags-list {
+  display: inline-flex;
   list-style: none;
   gap: 1rem;
   flex-wrap: wrap;
   text-decoration: none;
+  margin-block-end: 1rem;
+  border-radius: 3px;
+  padding: 1rem;
+  background-color: #e7f5ff;
 
   & a {
     text-decoration: none;
-    color: darkslategrey;
+    color: #1864ab;
   }
-}
 
-[aria-hidden="true"] {
-  display: inline-grid;
-  place-items: center;
-  background-color: darkslategray;
-  color: rgb(234, 244, 244);
-  font-size: 0.9rem;
-  font-weight: bold;
-  inline-size: 1.5rem;
-  block-size: 1.5rem;
-  border-radius: 100vh;
-  /* border: 2px solid #222; */
-
+  & [aria-hidden="true"] {
+    display: inline-grid;
+    place-items: center;
+    background-color: #1864ab;
+    color: rgb(234, 244, 244);
+    font-size: 0.9rem;
+    font-weight: bold;
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    border-radius: 100vh;
+  }
 }
 
 .md-attrs::before {
