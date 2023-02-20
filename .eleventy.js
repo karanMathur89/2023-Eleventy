@@ -1,32 +1,39 @@
-const markdownIt = require("markdown-it")
+//* Import Collections
+const { getPosts } = require('./config/collections/index.js');
+
+//* Import Plugins
+const markdownLib = require('./config/plugins/markdown.js')
+
 
 /**
  *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
  */
 
 module.exports = function (eleventyConfig) {
-    let mdOptions = {
-        html: true,
-        breaks: true,
-        linkify: true
-    }
-    eleventyConfig.setLibrary("md", markdownIt(mdOptions))
 
+    //Set Library
+    eleventyConfig.setLibrary("md", markdownLib)
+
+
+    //Passthrough
     eleventyConfig.addPassthroughCopy("src/assets/")
     eleventyConfig.addPassthroughCopy("src/assets/css/")
     eleventyConfig.addWatchTarget('src/assets/css/')
 
-    eleventyConfig.addCollection("post", (collectionApi) => {
-        return collectionApi.getFilteredByGlob("src/posts/**/*.md")
-    })
+
+    //Collections
+    eleventyConfig.addCollection("post", getPosts)
+
+
+
 
     return {
+        markdownTemplateEngine: "njk",
         dir: {
             input: 'src',
             output: 'dist',
             includes: '_includes',
             layouts: '_layouts'
-        },
-        markdownTemplateEngine: "njk"
+        }
     }
 }

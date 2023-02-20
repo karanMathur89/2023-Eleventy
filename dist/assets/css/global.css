@@ -58,8 +58,8 @@ dd {
 
 .tag-cloud > * {
   padding: 0px 4px;
-  background-color: #222;
-  color: pink;
+  background-color: #ccc;
+  color: darkslategray;
   border-radius: 3px;
 }
 
@@ -92,15 +92,15 @@ nav[aria-label="Previous and/or next page"] {
 
   & a {
     text-decoration: none;
-    color: hotpink;
+    color: darkslategrey;
   }
 }
 
 [aria-hidden="true"] {
   display: inline-grid;
   place-items: center;
-  background-color: hotpink;
-  color: rgb(236, 214, 225);
+  background-color: darkslategray;
+  color: rgb(234, 244, 244);
   font-size: 0.9rem;
   font-weight: bold;
   inline-size: 1.5rem;
@@ -108,4 +108,10 @@ nav[aria-label="Previous and/or next page"] {
   border-radius: 100vh;
   /* border: 2px solid #222; */
 
+}
+
+.md-attrs::before {
+  content: 'markdown-it-attrs works! ';
+  color: crimson;
+  font-weight: bold;
 }
