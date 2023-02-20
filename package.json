@@ -10,7 +10,7 @@
     "serve": "npx @11ty/eleventy --serve",
     "start": "npx @11ty/eleventy --serve",
     "debug": "DEBUG=* npx @11ty/eleventy",
-    "postcss:watch": "postcss src/css/global.css -o src/css/style.css --watch & npx @11ty/eleventy --serve"
+    "postcss:watch": "postcss src/assets/css/global.css -o src/assets/css/style.css --watch & npx @11ty/eleventy --serve"
   },
   "keywords": [],
   "author": "",
