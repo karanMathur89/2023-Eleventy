@@ -3,6 +3,9 @@
 
 const markdownIt = require('markdown-it')
 const markdownItAttrs = require('markdown-it-attrs')
+const markdownItMark = require('markdown-it-mark')
+const markdownItAnchor= require('markdown-it-anchor')
+const markdownItToc= require('markdown-it-toc-done-right')
 
 //* Add Plugins
 const markdownLib = markdownIt({
@@ -12,10 +15,16 @@ const markdownLib = markdownIt({
   typographer: true
 })
 .use(markdownItAttrs)
-
-
-
-
+.use(markdownItMark)
+.use(markdownItAnchor, {
+  permalink: markdownItAnchor.permalink.linkInsideHeader({
+    symbol: `
+      <span aria-hidden="true">#</span>
+    `,
+    placement: 'before'
+  })
+})
+.use(markdownItToc)
 
 
 

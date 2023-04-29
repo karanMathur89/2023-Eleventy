@@ -5,10 +5,6 @@
     "url": "/"
   },
   {
-    "name": "Gallery",
-    "url": "/gallery/"
-  },
-  {
     "name": "Data",
     "url": "/eleventy-data/"
   },

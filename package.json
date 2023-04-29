@@ -16,17 +16,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-beta.2",
-    "css-declaration-sorter": "^6.3.1",
-    "cssnano": "^5.1.14",
+    "@11ty/eleventy": "^2.0.1",
+    "css-declaration-sorter": "^6.4.0",
+    "cssnano": "^5.1.15",
     "markdown-it": "^13.0.1",
+    "markdown-it-anchor": "^8.6.7",
     "markdown-it-attrs": "^4.1.6",
-    "postcss": "^8.4.21",
+    "markdown-it-mark": "^3.0.1",
+    "markdown-it-toc-done-right": "^4.2.0",
+    "postcss": "^8.4.23",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
     "postcss-preset-env": "^7.8.3"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^3.0.0"
+    "@11ty/eleventy-img": "^3.1.0"
   }
 }

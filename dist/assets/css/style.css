@@ -31,8 +31,8 @@ body {
   */
 img, picture, video, canvas, svg {
     display: block;
-    max-width: 100%;
-    height: auto;
+    max-inline-size: 100%;
+    block-size: auto;
 }
 /*
     7. Remove built-in form typography styles
@@ -47,9 +47,8 @@ p, h1, h2, h3, h4, h5, h6 {
     word-wrap: break-word;
 }
 .wrapper {
-  width: min(100% - 2rem, 60ch);
-  margin-left: auto;
-  margin-right: auto;
+  inline-size: min(100% - 2rem, 60ch);
+  margin-inline: auto;
 }
 mark {
   background-color: palegoldenrod;
@@ -61,10 +60,9 @@ body {
   flex-direction: column;
 }
 body > * {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-block: 2em;
   }
-body > nav {
+body > nav { 
     background-color: #d0ebff;
   }
 body > header {
@@ -75,13 +73,17 @@ body > main {
   }
 body > footer {
     background-color: #e7f5ff;
-    margin-top: auto;
+    -webkit-margin-before: auto;
+            margin-block-start: auto;
   }
 code {
   background-color: #e7f5ff;
   color: #333;
-  font-size: 1rem;
+  font-size: clamp(1rem, 0.8rem + 1vw, 1.1rem);
   letter-spacing: 1px;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+  padding-block: 4px;
 }
 dt {
   font-weight: bold;
@@ -116,10 +118,6 @@ nav[aria-label="Previous and/or next page"] {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
-  /* display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center; */
 }
 .post-previous {
   grid-column-start: 1;
@@ -135,7 +133,8 @@ nav[aria-label="Previous and/or next page"] {
   gap: 1rem;
   flex-wrap: wrap;
   text-decoration: none;
-  margin-bottom: 1rem;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
   border-radius: 3px;
   padding: 1rem;
   background-color: #e7f5ff;
@@ -153,12 +152,53 @@ nav[aria-label="Previous and/or next page"] {
     color: rgb(234, 244, 244);
     font-size: 0.9rem;
     font-weight: bold;
-    width: 1.5rem;
-    height: 1.5rem;
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
     border-radius: 100vh;
   }
 .md-attrs::before {
   content: 'markdown-it-attrs works! ';
   color: crimson;
   font-weight: bold;
+}
+.table-of-contents {
+  margin-block: 1rem;
+  padding: 1rem;
+  background-color: rgb(0, 160, 248);
+  background-color: color(display-p3 0.01776 0.61547 0.98252);
+  color: #eee;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.table-of-contents ol {
+    list-style-position: inside;
+  }
+.table-of-contents a {
+    color: #eee;
+    text-decoration: none;
+  }
+[id^="heading"] {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+[id^="heading"]:where(:hover,.focus-visible) .header-anchor{
+    opacity: 1;
+  }
+[id^="heading"]:where(:hover, :focus-visible) .header-anchor{
+    opacity: 1;
+  }
+[id^="heading"]:target {
+    outline: none;
+  }
+.header-anchor {
+  position: absolute;
+  left: -1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  opacity: 0;
+}
+.experimental {
+  background-color: rgb(39, 154, 0);
+  background-color: color(display-p3 0.30273 0.59652 0.14614);
 }

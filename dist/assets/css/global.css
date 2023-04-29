@@ -19,7 +19,7 @@ body {
     padding-block: 2em;
   }
 
-  & > nav {
+  & > nav { 
     background-color: #d0ebff;
   }
 
@@ -39,8 +39,10 @@ body {
 code {
   background-color: #e7f5ff;
   color: #333;
-  font-size: 1rem;
+  font-size: clamp(1rem, 0.8rem + 1vw, 1.1rem);
   letter-spacing: 1px;
+  margin-inline-start: auto;
+  padding-block: 4px;
 }
 
 dt {
@@ -82,10 +84,6 @@ nav[aria-label="Previous and/or next page"] {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
-  /* display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center; */
 }
 
 .post-previous {
@@ -131,4 +129,48 @@ nav[aria-label="Previous and/or next page"] {
   content: 'markdown-it-attrs works! ';
   color: crimson;
   font-weight: bold;
+}
+
+.table-of-contents {
+  margin-block: 1rem;
+  padding: 1rem;
+  background-color: oklch(67.2% 0.2 240);
+  color: #eee;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  & ol {
+    list-style-position: inside;
+  }
+
+  & a {
+    color: #eee;
+    text-decoration: none;
+  }
+}
+
+[id^="heading"] {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:where(:hover, :focus-visible) .header-anchor{
+    opacity: 1;
+  }
+
+  &:target {
+    outline: none;
+  }
+}
+
+.header-anchor {
+  position: absolute;
+  left: -1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  opacity: 0;
+}
+
+.experimental {
+  background-color: oklch(60% 0.2 140);
 }
