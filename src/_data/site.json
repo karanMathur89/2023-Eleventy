@@ -1,4 +1,10 @@
 {
-    "name": "logmonologue",
-    "description": "Blog by Karan"
+    "url": "https://logmonologue.com",
+    "title": "logmonologue",
+    "description": "Blog by Karan Mathur",
+    "author": "Karan Mathur",
+    "role": "UI Designer",
+    "email": "a@k.com",
+    "twitter": "logmonologue",
+    "thumbnail": "building.jpeg"
 }

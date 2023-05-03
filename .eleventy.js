@@ -3,6 +3,7 @@ const { getPosts } = require('./config/collections/index.js')
 
 //* Import Plugins
 const markdownLib = require('./config/plugins/markdown.js')
+const metagen = require('eleventy-plugin-metagen')
 
 //* Import Shortcodes
 const imageShortcode = require('./config/shortcodes/index.js')
@@ -31,6 +32,9 @@ module.exports = function (eleventyConfig) {
 
     //Shortcodes
     eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode)
+
+    //Plugins
+    eleventyConfig.addPlugin(metagen)
 
 
 
