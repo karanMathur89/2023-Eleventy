@@ -207,8 +207,8 @@ nav[aria-label="Previous and/or next page"] {
 .table-of-contents {
   margin-block: 1rem;
   padding: 1rem;
-  background-color: rgb(0, 160, 248);
-  background-color: color(display-p3 0.01776 0.61547 0.98252);
+  background-color: rgb(0, 121, 193);
+  background-color: color(display-p3 0.00000 0.46360 0.80537);
   color: #eee;
   font-size: 1.5rem;
   font-weight: bold;

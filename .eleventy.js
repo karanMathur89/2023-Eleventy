@@ -8,6 +8,8 @@ const metagen = require('eleventy-plugin-metagen')
 //* Import Shortcodes
 const imageShortcode = require('./config/shortcodes/index.js')
 
+//* Import Filters
+const upperCase = require('./config/filters/index.js')
 
 /**
  *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
@@ -23,6 +25,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/")
     eleventyConfig.addPassthroughCopy("src/assets/css/")
     eleventyConfig.addPassthroughCopy("src/assets/fonts/")
+    eleventyConfig.addPassthroughCopy({'src/favicon/*': '/'})
     eleventyConfig.addWatchTarget('src/assets/css/')
 
 
@@ -30,14 +33,16 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection("post", getPosts)
 
 
-
     //Shortcodes
     eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode)
+
 
     //Plugins
     eleventyConfig.addPlugin(metagen)
 
 
+    //Filters
+    eleventyConfig.addFilter('upperCase', upperCase)
 
 
     return {

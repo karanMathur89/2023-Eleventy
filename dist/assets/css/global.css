@@ -134,7 +134,7 @@ nav[aria-label="Previous and/or next page"] {
 .table-of-contents {
   margin-block: 1rem;
   padding: 1rem;
-  background-color: oklch(67.2% 0.2 240);
+  background-color: oklch(55% 0.2 240);
   color: #eee;
   font-size: 1.5rem;
   font-weight: bold;
