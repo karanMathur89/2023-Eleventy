@@ -7,15 +7,15 @@
         {% set thumb = site.url + '/images/' + site.thumbnail %}
       {% endif %}
       {% metagen
-  title=title or site.title,
-  desc=description or site.description,
-  url=site.url + page.url,
-  img=thumb,
-  img_alt=thumbnailAlt,
-  twitter_card_type="summary_large_image",
-  twitter_handle=site.twitter,
-  name=site.author,
-  generator="eleventy",
-  comments=true %}
+          title=title or site.title,
+          desc=description or site.description,
+          url=site.url + page.url,
+          img=thumb,
+          img_alt=thumbnailAlt,
+          twitter_card_type="summary_large_image",
+          twitter_handle=site.twitter,
+          name=site.author,
+          generator="eleventy",
+          comments=true %}
       <link rel="stylesheet" href="/assets/css/style.css">
         <title>{{ title }}</title>
