@@ -22,6 +22,7 @@ module.exports = function (eleventyConfig) {
     //Passthrough
     eleventyConfig.addPassthroughCopy("src/assets/")
     eleventyConfig.addPassthroughCopy("src/assets/css/")
+    eleventyConfig.addPassthroughCopy("src/assets/fonts/")
     eleventyConfig.addWatchTarget('src/assets/css/')
 
 

@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
       {% if thumbnail %}
         {% set thumb = site.url + '/images/' + thumbnail %}
       {% else %}
@@ -17,5 +17,26 @@
           name=site.author,
           generator="eleventy",
           comments=true %}
-      <link rel="stylesheet" href="/assets/css/style.css">
-        <title>{{ title }}</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>{{ title }}</title>
+<link
+      rel="preload"
+      href="/assets/fonts/merriweather/merriweather-v30-latin-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/merriweather/merriweather-v30-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/merriweather/merriweather-v30-latin-900.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
