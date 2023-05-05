@@ -5,13 +5,15 @@ permalink: '/eleventy-data/'
 
 
 
-<h2><code>page</code></h2>
+<h2><code>page object</code></h2>
 <dl>
   {% for key, value in page %}
   <div>
-    <dt>{{key}}</dt><dd>{{value}}</dd>
+    <dt>{{key}} </dt><dd>{{value}}</dd>
   </div>
 {% endfor %}
 </dl>
 
+<br>
+ <h2><code>eleventy object</code></h2>
 {{eleventy | dump}}

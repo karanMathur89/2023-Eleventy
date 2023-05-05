@@ -1,5 +1,5 @@
 ---
-title: Third Article
+title: Image Plugin
 ---
 
 <figure>

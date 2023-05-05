@@ -5,6 +5,12 @@
   margin-inline: auto;
 }
 
+.happy {
+  padding: 1rem;
+  background-color: oklch(30% 0.2 250);
+  color: #eee;
+}
+
 mark {
   background-color: palegoldenrod;
 }

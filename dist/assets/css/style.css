@@ -93,6 +93,12 @@ h6 {
   inline-size: min(100% - 2rem, 60ch);
   margin-inline: auto;
 }
+.happy {
+  padding: 1rem;
+  background-color: rgb(0, 44, 103);
+  background-color: color(display-p3 0.00000 0.15815 0.43076);
+  color: #eee;
+}
 mark {
   background-color: palegoldenrod;
 }
