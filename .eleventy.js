@@ -4,6 +4,7 @@ const { getPosts } = require('./config/collections/index.js')
 //* Import Plugins
 const markdownLib = require('./config/plugins/markdown.js')
 const metagen = require('eleventy-plugin-metagen')
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
 
 //* Import Shortcodes
 const imageShortcode = require('./config/shortcodes/index.js')
@@ -39,6 +40,7 @@ module.exports = function (eleventyConfig) {
 
     //Plugins
     eleventyConfig.addPlugin(metagen)
+    eleventyConfig.addPlugin(syntaxHighlight)
 
 
     //Filters

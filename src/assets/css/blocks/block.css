@@ -1,0 +1,161 @@
+mark {
+  background-color: palegoldenrod;
+}
+
+body {
+  color: #111;
+
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    padding-block: 2em;
+  }
+
+  & > nav { 
+    background-color: #d0ebff;
+  }
+
+  & > header {
+    background-color: #e7f5ff;
+  }
+
+  & > main {
+    background-color: #d0ebff;
+  }
+
+  & > footer {
+    background-color: #e7f5ff;
+    margin-block-start: auto;
+  }
+}
+
+dt {
+  font-weight: bold;
+}
+
+dt,
+dd {
+  display: inline;
+}
+
+[aria-current="page"] {
+  background-color: #74c0fc;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding:0;
+}
+
+.tag-cloud > * {
+  padding: 0px 4px;
+  background-color: #e7f5ff;
+  color: #1864ab;
+  border-radius: 3px;
+}
+
+.tag-cloud a {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+nav[aria-label="Previous and/or next page"] {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+
+.post-previous {
+  grid-column-start: 1;
+  /* margin-right: auto; */
+}
+
+.post-next {
+  grid-column-start: 2;
+  /* margin-left: auto; */
+}
+
+.tags-list {
+  display: inline-flex;
+  list-style: none;
+  gap: 1rem;
+  flex-wrap: wrap;
+  text-decoration: none;
+  margin-block-end: 1rem;
+  border-radius: 3px;
+  padding: 1rem;
+  background-color: #e7f5ff;
+
+  & a {
+    text-decoration: none;
+    color: #1864ab;
+  }
+
+  & [aria-hidden="true"] {
+    display: inline-grid;
+    place-items: center;
+    background-color: #1864ab;
+    color: rgb(234, 244, 244);
+    font-size: 0.9rem;
+    font-weight: bold;
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    border-radius: 100vh;
+  }
+}
+
+.md-attrs::before {
+  content: 'markdown-it-attrs works! ';
+  color: crimson;
+  font-weight: bold;
+}
+
+.table-of-contents {
+  margin-block: 1rem;
+  padding: 1rem;
+  background-color: oklch(55% 0.2 240);
+  color: #eee;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  & ol {
+    list-style-position: inside;
+  }
+
+  & a {
+    color: #eee;
+    text-decoration: none;
+  }
+}
+
+[id^="heading"] {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:where(:hover, :focus-visible) .header-anchor{
+    opacity: 1;
+  }
+
+  &:target {
+    outline: none;
+  }
+}
+
+.header-anchor {
+  position: absolute;
+  left: -1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  opacity: 0;
+}
+
+.experimental {
+  background-color: oklch(60% 0.2 140);
+}
