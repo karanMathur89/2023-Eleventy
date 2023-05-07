@@ -45,6 +45,22 @@
   src: url('/assets/fonts/merriweather/merriweather-v30-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
        url('/assets/fonts/merriweather/merriweather-v30-latin-900.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+body > footer {
+    padding: 1rem;
+    -webkit-margin-before: auto;
+            margin-block-start: auto;
+    background-color: rgb(226, 233, 238);
+    background-color: color(display-p3 0.89158 0.91238 0.93096);
+  }
+mark {
+  background-color: rgb(255, 233, 91);
+  background-color: color(display-p3 1.00000 0.91804 0.37101);
+}
 h1,
 h2,
 h3 {

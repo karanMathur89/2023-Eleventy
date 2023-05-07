@@ -1,3 +1,19 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  & > footer {
+    padding: 1rem;
+    margin-block-start: auto;
+    background-color: oklch(93% 0.01 240);
+  }
+}
+mark {
+  background-color: oklch(94% 0.2 95);
+}
+
+
 h1,
 h2,
 h3 {
