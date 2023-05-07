@@ -1,0 +1,4 @@
+:root {
+  --clr-primary: oklch(50% 0.2 190);
+  --clr-secondary: oklch(50% 0.2 350);
+}

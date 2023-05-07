@@ -1,7 +1,5 @@
-@import 'global/reset.css';
-@import 'global/fonts.css';
-@import 'global/global-styles.css';
-
-@import-glob 'blocks/*.css';
-@import-glob 'compositions/*.css';
+@import-glob 'abstracts/*.css';
 @import-glob 'utilities/*.css';
+@import-glob 'base/*.css';
+@import-glob 'components/*.css';
+@import-glob 'layout/*.css';

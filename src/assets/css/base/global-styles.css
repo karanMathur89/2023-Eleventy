@@ -1,0 +1,9 @@
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  max-width: 20ch;
+	background-color: var(--clr-primary);
+  color: #eee;
+  padding: 10vh;
+}
