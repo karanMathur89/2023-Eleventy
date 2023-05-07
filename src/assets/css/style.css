@@ -56,6 +56,16 @@ h3 {
   color: #eee;
   padding: 1rem;
 }
+dt {
+  font-weight: bold;
+}
+dt,
+dd {
+  display: inline;
+}
+[aria-current="page"] {
+  background-color: #74c0fc;
+}
 /*
 1. Use a more-intuitive box-sizing model.
 */
@@ -254,41 +264,18 @@ code.language-markup .token.script .token.keyword {
 	line-height: 1em;
 	box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
 }
-mark {
-  background-color: palegoldenrod;
+nav[aria-label="Previous and/or next page"] {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
 }
-body {
-  color: #111;
-
-  display: flex;
-  flex-direction: column;
+.post-previous {
+  grid-column-start: 1;
+  /* margin-right: auto; */
 }
-body > * {
-    padding-block: 2em;
-  }
-body > nav { 
-    background-color: #d0ebff;
-  }
-body > header {
-    background-color: #e7f5ff;
-  }
-body > main {
-    background-color: #d0ebff;
-  }
-body > footer {
-    background-color: #e7f5ff;
-    -webkit-margin-before: auto;
-            margin-block-start: auto;
-  }
-dt {
-  font-weight: bold;
-}
-dt,
-dd {
-  display: inline;
-}
-[aria-current="page"] {
-  background-color: #74c0fc;
+.post-next {
+  grid-column-start: 2;
+  /* margin-left: auto; */
 }
 .tag-cloud {
   display: flex;
@@ -308,19 +295,6 @@ dd {
   margin: 0;
   padding: 0;
   color: inherit;
-}
-nav[aria-label="Previous and/or next page"] {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-between;
-}
-.post-previous {
-  grid-column-start: 1;
-  /* margin-right: auto; */
-}
-.post-next {
-  grid-column-start: 2;
-  /* margin-left: auto; */
 }
 .tags-list {
   display: inline-flex;
@@ -351,11 +325,6 @@ nav[aria-label="Previous and/or next page"] {
     block-size: 1.5rem;
     border-radius: 100vh;
   }
-.md-attrs::before {
-  content: 'markdown-it-attrs works! ';
-  color: crimson;
-  font-weight: bold;
-}
 .table-of-contents {
   margin-block: 1rem;
   padding: 1rem;
@@ -392,8 +361,4 @@ nav[aria-label="Previous and/or next page"] {
   font-size: 1rem;
   text-decoration: none;
   opacity: 0;
-}
-.experimental {
-  background-color: rgb(39, 154, 0);
-  background-color: color(display-p3 0.30273 0.59652 0.14614);
 }

@@ -7,3 +7,16 @@ h3 {
   color: #eee;
   padding: 1rem;
 }
+
+dt {
+  font-weight: bold;
+}
+
+dt,
+dd {
+  display: inline;
+}
+
+[aria-current="page"] {
+  background-color: #74c0fc;
+}

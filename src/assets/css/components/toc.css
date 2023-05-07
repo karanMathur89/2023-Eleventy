@@ -1,0 +1,39 @@
+.table-of-contents {
+  margin-block: 1rem;
+  padding: 1rem;
+  background-color: oklch(55% 0.2 240);
+  color: #eee;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  & ol {
+    list-style-position: inside;
+  }
+
+  & a {
+    color: #eee;
+    text-decoration: none;
+  }
+}
+
+[id^="heading"] {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:where(:hover, :focus-visible) .header-anchor{
+    opacity: 1;
+  }
+
+  &:target {
+    outline: none;
+  }
+}
+
+.header-anchor {
+  position: absolute;
+  left: -1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  opacity: 0;
+}
