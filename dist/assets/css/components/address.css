@@ -1,0 +1,32 @@
+.address {
+  /* outline: 1px solid; */
+  font-style: normal;
+  width: fit-content;
+  margin-inline: auto;
+  font-size: var(--step-1);
+  font-weight: bold;
+  padding: var(--space-1);
+  background-color: hsl(210, 10%, 98%);
+  border: 1px dashed var(--color-primary);
+  border-radius: 2px;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: hsl(210, 10%, 3%);
+  }
+}
+
+.mail span,
+.tel span {
+  display: inline-block;
+  opacity: 0.8;
+  min-inline-size: 6ch;
+}
+
+:where(.mail, .tel) a {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: var(--color-primary);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
+  text-underline-position: under;
+}
