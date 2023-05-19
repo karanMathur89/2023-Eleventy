@@ -1,5 +1,5 @@
 @import-glob 'abstracts/*.css';
-@import-glob 'utilities/*.css';
 @import-glob 'base/*.css';
+@import-glob 'utilities/*.css';
 @import-glob 'components/*.css';
 @import-glob 'layout/*.css';

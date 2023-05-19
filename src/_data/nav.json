@@ -5,11 +5,11 @@
     "url": "/"
   },
   {
-    "name": "Data",
-    "url": "/eleventy-data/"
+    "name": "Contact",
+    "url": "/contact"
   },
   {
-    "name": "Archive",
-    "url": "/archive/"
+    "name": "About",
+    "url": "/about"
   }
 ]

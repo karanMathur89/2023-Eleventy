@@ -1,0 +1,41 @@
+.pricing-table {
+  /* outline: 1px solid; */
+  inline-size: 100%;
+  border-collapse: collapse;
+  text-align: end;
+  border: 1px solid var(--color-border);
+  /* padding: 1rem; */
+
+  & :where(td, th) {
+    padding: var(--space-0);
+    padding-block-end: 0;
+    text-align: end;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.5px;
+  }
+
+  &  thead td {
+    text-align: start;
+    
+  }
+
+  & thead tr {
+    background-color: var(--color-primary);
+    color: var(--color-text-dark);
+  }
+
+  & tbody tr:nth-child(odd) {
+    background-color: hsl(210 10% 50% / 0.2);
+  } 
+
+  & tbody td {
+    text-align: end;
+  }
+}
+
+tr.description th {
+  font-size: var(--step-s);
+  padding: calc(var(--space-0) / 2);
+  padding-inline-end: var(--space-0);
+  opacity: 0.9;
+}

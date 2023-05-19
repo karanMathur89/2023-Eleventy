@@ -1,4 +1,9 @@
 .wrapper {
-  inline-size: min(100% - 2rem, 60ch);
+  inline-size: min(100%, 35rem);
   margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.wrapper[data-width="wide"] {
+  inline-size: min(100%, 45rem);
 }
