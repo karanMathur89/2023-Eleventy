@@ -1,0 +1,28 @@
+---
+layout: 'base.njk'
+---
+
+<ul class="tag-cloud">
+  {% for tag in tags %}
+    <li>
+      <a href="/tags/{{ tag }}/">{{ tag | lower }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% if content %}
+<strong><code>{{content | safe | striptags(true)| wordcount }}</code> words</strong>
+{% endif %}
+
+{{ content | safe }}
+
+{% set previousPost = collections.post | getPreviousCollectionItem %}
+{% set nextPost = collections.post | getNextCollectionItem %}
+<nav aria-label="Previous and/or next page">
+  {% if previousPost %}
+    <a class="post-previous" href="{{ previousPost.url }}">Previous: {{ previousPost.data.title }}</a>
+  {% endif %}
+  {% if nextPost %}
+    <a class="post-next" href="{{ nextPost.url }}">Next: {{ nextPost.data.title }}</a>
+  {% endif %}
+</nav>

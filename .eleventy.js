@@ -1,35 +1,59 @@
-const markdownIt = require("markdown-it")
+//* Import Collections
+const { getPosts } = require('./config/collections/index.js')
 
+//* Import Plugins
+const markdownLib = require('./config/plugins/markdown.js')
+const metagen = require('eleventy-plugin-metagen')
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
 
+//* Import Shortcodes
+const imageShortcode = require('./config/shortcodes/index.js')
+
+//* Import Filters
+const upperCase = require('./config/filters/index.js')
 
 /**
  *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
  */
 
-
-
 module.exports = function (eleventyConfig) {
-    let mdOptions = {
-        html: true,
-        breaks: true,
-        linkify: true
-    }
-    eleventyConfig.setLibrary("md", markdownIt(mdOptions))
 
+    //Set Library
+    eleventyConfig.setLibrary("md", markdownLib)
+
+
+    //Passthrough
     eleventyConfig.addPassthroughCopy("src/assets/")
-    eleventyConfig.addPassthroughCopy("src/css/")
-    eleventyConfig.addWatchTarget('src/css/')
+    eleventyConfig.addPassthroughCopy("src/assets/css/")
+    eleventyConfig.addPassthroughCopy("src/assets/fonts/")
+    eleventyConfig.addPassthroughCopy({'src/favicon/*': '/'})
+    eleventyConfig.addWatchTarget('src/assets/css/')
 
-    eleventyConfig.addCollection("post", (collectionApi) => {
-        return collectionApi.getFilteredByGlob("**/*.md")
-    })
+
+    //Collections
+    eleventyConfig.addCollection("post", getPosts)
+
+
+    //Shortcodes
+    eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode)
+
+
+    //Plugins
+    eleventyConfig.addPlugin(metagen)
+    eleventyConfig.addPlugin(syntaxHighlight)
+
+
+    //Filters
+    eleventyConfig.addFilter('upperCase', upperCase)
+
 
     return {
+        markdownTemplateEngine: "njk",
         dir: {
-            input: "src",
-            includes: "_includes",
-            output: "_site"
-        },
-        markdownTemplateEngine: "njk"
+            input: 'src',
+            output: 'dist',
+            includes: '_includes',
+            layouts: '_layouts'
+        }
     }
 }

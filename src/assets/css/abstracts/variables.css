@@ -1,0 +1,100 @@
+:root {
+
+  /*? Sizes */
+  --step-s: clamp(0.83rem, calc(0.79rem + 0.2vw), 0.94rem);
+  --step-0: clamp(1rem, calc(0.95rem + 0.24vw), 1.13rem);
+  --step-1: clamp(1.2rem, calc(1.14rem + 0.29vw), 1.35rem);
+  --step-2: clamp(1.44rem, calc(1.37rem + 0.35vw), 1.62rem);
+  --step-3: clamp(1.73rem, calc(1.64rem + 0.42vw), 1.94rem);
+  --step-4: clamp(2.07rem, calc(1.97rem + 0.5vw), 2.33rem);
+  --step-5: clamp(2.49rem, calc(2.37rem + 0.61vw), 2.8rem);
+  --step-6: clamp(2.99rem, calc(2.84rem + 0.73vw), 3.36rem);
+
+  --size-content-1: 10ch;
+  --size-content-2: 25ch;
+  --size-content-3: 60ch;
+  --size-content-4: 80ch;
+
+  --space-0: 0.5rem;
+  --space-1: 1rem;
+  --space-2: 2rem;
+  --space-3: 3rem;
+  --space-4: 4rem;
+
+
+  /*? Typography */
+  /* --font-body: "Satoshi"; */
+  --font-heading: ui-serif;
+
+
+
+/*? Colors */
+
+--hue-grey: 270;
+  --grey-1: oklch(99% 0.01 var(--hue-grey));
+  --grey-2: oklch(96% 0.01 var(--hue-grey));
+  --grey-3: oklch(93% 0.01 var(--hue-grey));
+  --grey-4: oklch(80% 0.01 var(--hue-grey));
+  --grey-5: oklch(65% 0.01 var(--hue-grey));
+  --grey-6: oklch(40% 0.01 var(--hue-grey));
+  --grey-7: oklch(30% 0.01 var(--hue-grey));
+  --grey-8: oklch(38% 0.01 var(--hue-grey));
+  --grey-9: oklch(30% 0.01 var(--hue-grey));
+  --grey-10: oklch(22% 0.01 var(--hue-grey));
+
+  --hue: 170;
+  --clr-1: oklch(99% 0.02 var(--hue));
+  --clr-2: oklch(90% 0.07 var(--hue));
+  --clr-3: oklch(80% 0.12 var(--hue));
+  --clr-4: oklch(72% 0.12 var(--hue));
+  --clr-5: oklch(67% 0.12 var(--hue));
+  --clr-6: oklch(50% 0.15 var(--hue));
+  --clr-7: oklch(42% 0.12 var(--hue));
+  --clr-8: oklch(36% 0.12 var(--hue));
+  --clr-9: oklch(27% 0.07 var(--hue));
+  --clr-10: oklch(22% 0.02 var(--hue));
+
+
+--color-light: var(--clr-1);
+--color-dark: var(--clr-10);
+
+
+--color-primary-light: var(--clr-6);
+--color-primary-dark: var(--clr-6);
+
+
+--color-text-light: var(--color-dark);
+--color-text-dark: var(--color-light);
+
+
+--color-bg-1-light: var(--grey-3);
+--color-bg-2-light: var(--grey-2);
+--color-bg-3-light: var(--grey-1);
+
+--color-bg-1-dark: var(--grey-10);
+--color-bg-2-dark: var(--grey-9);
+--color-bg-3-dark: var(--grey-8);
+
+--color-border-light: oklch(89% 0.01 var(--hue-grey));
+--color-border-dark: oklch(38% 0.01 var(--hue-grey));
+
+
+
+--color-primary: var(--color-primary-light);
+--color-text: var(--color-text-light);
+--color-bg-1: var(--color-bg-1-light);
+--color-bg-2: var(--color-bg-2-light);
+--color-bg-3: var(--color-bg-3-light);
+--color-border: var(--color-border-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: var(--color-primary-dark);
+    --color-text: var(--color-text-dark);
+    --color-bg-1: var(--color-bg-1-dark);
+    --color-bg-2: var(--color-bg-2-dark);
+    --color-bg-3: var(--color-bg-3-dark);
+    --color-border: var(--color-border-dark);
+  }
+}
