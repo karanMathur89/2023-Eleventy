@@ -1,0 +1,80 @@
+/*
+  Global styles
+
+  Low-specificity, global styles that apply to the whole
+  project: https://cube.fyi/css.html
+*/
+body {
+  color: var(--color-text);
+  background-color: var(--color-bg-1);
+  font-size: var(--step-0);
+  /* font-family: Helvetica; */
+  line-height: 1.4;
+  font-family: 'Rubik';
+  font-weight: 400;
+}
+
+/* Base typesetting */
+h1,
+h2,
+h3 {
+  max-inline-size: var(--size-content-2);
+  line-height: 1.1;
+  /* font-family: 'Merriweather'; */
+}
+
+h1 {
+  font-size: var(--step-5);
+}
+
+h2 {
+  font-size: var(--step-3);
+}
+
+h3 {
+  font-size: var(--step-2);
+}
+
+/* Set line lengths */
+p,
+li {
+  max-inline-size: var(--size-content-3);
+}
+
+svg {
+  display: block;
+}
+
+[role='list'] {
+  padding: 0;
+}
+
+/* Base interactive elements */
+
+a {
+  color: currentcolor;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* :focus {
+  outline: 3px solid;
+  outline-offset: 0.3ch;
+} */
+
+:target {
+  /* scroll-margin-top: 2ex; */
+}
+
+/* Base selection styles that invert whatever colours are rendered */
+::selection {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+address, table {
+  margin: 0;
+  padding: 0;
+}
