@@ -1,0 +1,142 @@
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html, body {
+    height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont;
+}
+/*
+    6. Improve media defaults
+  */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input, button, textarea, select {
+    font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p, h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+}
+.wrapper {
+  width: min(100% - 2rem, 60ch);
+  margin-left: auto;
+  margin-right: auto;
+}
+mark {
+  background-color: palegoldenrod;
+}
+body {
+  background-color: #ecf4fa;
+  color: #111;
+}
+body > * {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+body > header {
+    background-color: lightsteelblue;
+  }
+body > main {
+    background-color: #eee;
+  }
+body > footer {
+    background-color: lightsteelblue;
+  }
+code {
+  background-color: #ddd;
+  color: #000;
+}
+dt {
+  font-weight: bold;
+}
+dt,
+dd {
+  display: inline;
+}
+[aria-current="page"] {
+  background-color: lightcoral;
+}
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tag-cloud > * {
+  padding: 0px 4px;
+  background-color: #222;
+  color: pink;
+  border-radius: 3px;
+}
+.tag-cloud a {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+nav[aria-label="Previous and/or next page"] {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+.post-previous {
+  grid-column-start: 1;
+}
+.post-next {
+  grid-column-start: 2;
+}
+.tag-catg {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+.tag-catg a {
+    text-decoration: none;
+    color: hotpink;
+  }
+[aria-hidden="true"] {
+  display: inline-grid;
+  align-items: center;
+  justify-items: center;
+  place-items: center;
+  background-color: hotpink;
+  color: rgb(236, 214, 225);
+  font-size: 0.9rem;
+  font-weight: bold;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100vh;
+  /* border: 2px solid #222; */
+
+}
