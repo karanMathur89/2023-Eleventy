@@ -2,9 +2,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
       {% if thumbnail %}
-        {% set thumb = site.url + '/images/' + thumbnail %}
+        {% set thumb = site.url + '/assets/images/' + thumbnail %}
       {% else %}
-        {% set thumb = site.url + '/images/' + site.thumbnail %}
+        {% set thumb = site.url + '/assets/images/' + site.thumbnail %}
       {% endif %}
       {% metagen
           title=title or site.title,
