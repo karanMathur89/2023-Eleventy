@@ -1,6 +1,6 @@
 const Image = require('@11ty/eleventy-img')
 
-const imageShortcode =  async (src, alt, sizes = "100vw") => {
+const imageShortcode =  async (src, alt, sizes = "30vw, 60vw, 100vw") => {
 
   src = "src/assets/images/" + src;
 

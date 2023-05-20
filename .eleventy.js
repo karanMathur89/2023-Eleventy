@@ -35,7 +35,7 @@ module.exports = function (eleventyConfig) {
 
 
     //Shortcodes
-    eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode)
+    eleventyConfig.addShortcode("image", imageShortcode)
 
 
     //Plugins
