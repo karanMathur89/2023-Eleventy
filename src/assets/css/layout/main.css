@@ -2,7 +2,6 @@
 
   & h2 {
     text-align: center;
-    /* margin-block-end: var(--space-2); */
     margin-inline: auto;
   }
 

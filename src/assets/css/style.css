@@ -361,27 +361,27 @@ article .about-content > *:where(h2:not(:first-child)) {
   border: 1px dashed rgb(0, 120, 88);
   border: 1px dashed color(display-p3 0.00000 0.47835 0.34567);
   border: 1px dashed var(--color-primary);
-  border-radius: 2px;
+  border-radius: 1ex;
 }
 
 @media (color-index: 48) {
 
 .address {
-    background-color: hsl(210, 10%, 3%);
+    background-color: hsl(210, 10%, 5%);
 }
   }
 
 @media (color: 48842621) {
 
 .address {
-    background-color: hsl(210, 10%, 3%);
+    background-color: hsl(210, 10%, 5%);
 }
   }
 
 @media (prefers-color-scheme: dark) {
 
 .address {
-    background-color: hsl(210, 10%, 3%);
+    background-color: hsl(210, 10%, 5%);
 }
   }
 
@@ -395,12 +395,12 @@ article .about-content > *:where(h2:not(:first-child)) {
 :where(.mail, .tel) a {
   text-decoration: underline;
   text-decoration-style: solid;
-  text-decoration-color: rgb(0, 120, 88);
-  text-decoration-color: color(display-p3 0.00000 0.47835 0.34567);
-  text-decoration-color: var(--color-primary);
-  text-decoration-thickness: 3px;
-  text-underline-offset: 3px;
-  text-underline-position: under;
+  text-decoration-color: rgb(17, 30, 25);
+  text-decoration-color: color(display-p3 0.07751 0.11501 0.09944);
+  text-decoration-color: var(--color-text);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  /* text-underline-position: under; */
 }
 
 .hero .heading {
@@ -676,7 +676,6 @@ main > header > .region {
 
 .main h2 {
     text-align: center;
-    /* margin-block-end: var(--space-2); */
     margin-inline: auto;
   }
 
