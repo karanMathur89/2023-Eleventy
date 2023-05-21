@@ -12,6 +12,12 @@
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: cover;
+
+  @media (max-width: 30em) {
+    max-inline-size: var(--size-content-2);
+  }
+
+
 }
 
 @media (min-width: 30em) {
@@ -31,6 +37,7 @@
 
 h1 {
   font-weight: normal;
+  text-shadow: 1px 1px 1px #0003;
 }
 
 .main__header {
