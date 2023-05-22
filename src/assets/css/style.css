@@ -30,8 +30,6 @@
 
 /*? Colors */
 
-  --test: hsl(162, 88%, 30%);
-
   --hue-grey: 270;
   --grey-1: oklch(99% 0.01 var(--hue-grey));
   --grey-2: oklch(96% 0.01 var(--hue-grey));
@@ -70,10 +68,12 @@
 
 
 --color-bg-1-light: var(--grey-3);
+--color-bg-1a-light: oklch(91% 0.01 var(--hue-grey));
 --color-bg-2-light: var(--grey-2);
 --color-bg-3-light: var(--grey-1);
 
 --color-bg-1-dark: var(--grey-10);
+--color-bg-1a-dark: oklch(14% 0.01 var(--hue-grey));
 --color-bg-2-dark: var(--grey-9);
 --color-bg-3-dark: var(--grey-8);
 
@@ -85,6 +85,7 @@
 --color-primary: var(--color-primary-light);
 --color-text: var(--color-text-light);
 --color-bg-1: var(--color-bg-1-light);
+--color-bg-1a: var(--color-bg-1a-light);
 --color-bg-2: var(--color-bg-2-light);
 --color-bg-3: var(--color-bg-3-light);
 --color-border: var(--color-border-light);
@@ -95,6 +96,7 @@
     --color-primary: var(--color-primary-dark);
     --color-text: var(--color-text-dark);
     --color-bg-1: var(--color-bg-1-dark);
+    --color-bg-1a: var(--color-bg-1a-dark);
     --color-bg-2: var(--color-bg-2-dark);
     --color-bg-3: var(--color-bg-3-dark);
     --color-border: var(--color-border-dark);
@@ -106,6 +108,7 @@
     --color-primary: var(--color-primary-dark);
     --color-text: var(--color-text-dark);
     --color-bg-1: var(--color-bg-1-dark);
+    --color-bg-1a: var(--color-bg-1a-dark);
     --color-bg-2: var(--color-bg-2-dark);
     --color-bg-3: var(--color-bg-3-dark);
     --color-border: var(--color-border-dark);
@@ -117,6 +120,7 @@
     --color-primary: var(--color-primary-dark);
     --color-text: var(--color-text-dark);
     --color-bg-1: var(--color-bg-1-dark);
+    --color-bg-1a: var(--color-bg-1a-dark);
     --color-bg-2: var(--color-bg-2-dark);
     --color-bg-3: var(--color-bg-3-dark);
     --color-border: var(--color-border-dark);
@@ -226,11 +230,6 @@ a:hover {
   color: var(--color-light);
 }
 
-address, table {
-  margin: 0;
-  padding: 0;
-}
-
 /*
 1. Use a more-intuitive box-sizing model.
 */
@@ -318,12 +317,6 @@ h6 {
 .region {
   padding-block: 4rem;
   padding-block: var(--space-4);
-  -webkit-border-after: 2px solid rgb(216, 219, 226);
-          border-block-end: 2px solid rgb(216, 219, 226);
-  -webkit-border-after: 2px solid color(display-p3 0.84864 0.85656 0.88191);
-          border-block-end: 2px solid color(display-p3 0.84864 0.85656 0.88191);
-  -webkit-border-after: 2px solid var(--color-border);
-          border-block-end: 2px solid var(--color-border);
 }
 
 .wrapper {
@@ -483,12 +476,9 @@ h1 {
 }
 
 .pricing-table {
-  /* outline: 1px solid; */
   inline-size: 100%;
   border-collapse: collapse;
   text-align: end;
-  /* border: 1px solid var(--color-border); */
-  /* padding: 1rem; */
 }
 
 .pricing-table :where(td, th) {
@@ -502,9 +492,8 @@ h1 {
     letter-spacing: -0.5px;
   }
 
-.pricing-table  thead td {
+.pricing-table thead td {
     text-align: start;
-    
   }
 
 .pricing-table thead tr {
@@ -528,11 +517,16 @@ h1 {
     text-align: end;
   }
 
+.pricing-table :where(tbody, thead) :where(td, th):first-child {
+    /* text-align: center; */
+  }
+
 tr.description th {
   font-size: max(0.83rem, min(calc(0.79rem + 0.2vw), 0.94rem));
   font-size: var(--step-s);
   padding: calc(0.5rem / 2);
   padding: calc(var(--space-0) / 2);
+  padding-top: 0;
   -webkit-padding-end: 0.5rem;
           padding-inline-end: 0.5rem;
   -webkit-padding-end: var(--space-0);
@@ -564,6 +558,10 @@ tr.description th {
   position: relative;
 
 }
+
+.process li :where(h2, h3) + * {
+    /* margin-block-start: 0.5rem; */
+  }
 
 .process li + *::after {
     content: '';
@@ -614,7 +612,7 @@ gap: var(--space-0);
 }
 
 #mainnav ul a {
-  padding: 0.25em 0.5em;
+  padding: 0.5em;
   text-decoration: none;
   /* letter-spacing: 0.5px; */
 
@@ -641,12 +639,13 @@ gap: var(--space-0);
     position: absolute;
     display: inline-block;
     inset: 0;
-    inline-size: 5px;
-    block-size: 5px;
+    inline-size: 0.4rem;
+    block-size: 0.4rem;
     border-radius: 100vh;
-    background-color: rgba(255,255,255,0.86667);
+    background-color: #fff;
     margin-inline: auto;
-    transform: translateY(-2px);
+    opacity: 0.8;
+    transform: translateY(1px);
   }
 
 [role="banner"] {
@@ -664,29 +663,31 @@ gap: var(--space-0);
 }
 
 .hero {
+  padding-block: 3rem;
+  padding-block: var(--space-3);
+
+  color: rgb(240, 255, 248);
+
+  color: color(display-p3 0.95343 1.00000 0.97587);
+
+  color: var(--color-light);
+
   background-color: rgb(0, 121, 80);
+
   background-color: color(display-p3 0.00073 0.47412 0.31868);
+
   background-color: var(--color-primary);
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuZGV2L3N2Z2pzIiB2aWV3Qm94PSIwIDAgNzAwIDcwMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGRlZnM+PGZpbHRlciBpZD0ibm5ub2lzZS1maWx0ZXIiIHg9Ii0yMCUiIHk9Ii0yMCUiIHdpZHRoPSIxNDAlIiBoZWlnaHQ9IjE0MCUiIGZpbHRlclVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgcHJpbWl0aXZlVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBjb2xvci1pbnRlcnBvbGF0aW9uLWZpbHRlcnM9ImxpbmVhclJHQiI+Cgk8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC4wNSIgbnVtT2N0YXZlcz0iNCIgc2VlZD0iMTUiIHN0aXRjaFRpbGVzPSJzdGl0Y2giIHg9IjAlIiB5PSIwJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcmVzdWx0PSJ0dXJidWxlbmNlIj48L2ZlVHVyYnVsZW5jZT4KCTxmZVNwZWN1bGFyTGlnaHRpbmcgc3VyZmFjZVNjYWxlPSIyMiIgc3BlY3VsYXJDb25zdGFudD0iMS40IiBzcGVjdWxhckV4cG9uZW50PSIyMCIgbGlnaHRpbmctY29sb3I9IiM0YTkwZTIiIHg9IjAlIiB5PSIwJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgaW49InR1cmJ1bGVuY2UiIHJlc3VsdD0ic3BlY3VsYXJMaWdodGluZyI+CiAgICAJCTxmZURpc3RhbnRMaWdodCBhemltdXRoPSIzIiBlbGV2YXRpb249IjEwNSI+PC9mZURpc3RhbnRMaWdodD4KICAJPC9mZVNwZWN1bGFyTGlnaHRpbmc+CiAgPGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBpbj0ic3BlY3VsYXJMaWdodGluZyIgcmVzdWx0PSJjb2xvcm1hdHJpeCI+PC9mZUNvbG9yTWF0cml4Pgo8L2ZpbHRlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjcwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9InRyYW5zcGFyZW50Ij48L3JlY3Q+PHJlY3Qgd2lkdGg9IjcwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9IiM0YTkwZTIiIGZpbHRlcj0idXJsKCNubm5vaXNlLWZpbHRlcikiPjwvcmVjdD48L3N2Zz4=");
   ;
   background-size: auto 100%;
   background-position: center;
-  /* background-repeat: no-repeat; */
-  background-blend-mode: overlay;
+  background-blend-mode: hard-light;
 }
 
-main > header {
-  -webkit-padding-before: 3rem;
-          padding-block-start: 3rem;
-  -webkit-padding-before: var(--space-3);
-          padding-block-start: var(--space-3);
-  color: rgb(240, 255, 248);
-  color: color(display-p3 0.95343 1.00000 0.97587);
-  color: var(--color-light);
-}
-
-main > header > .region {
-    border: none;
+.seperator {
+  width: 100%;
+  height: 3rem;
+  transform: translateY(-2.9rem);
 }
 
 .main__header {

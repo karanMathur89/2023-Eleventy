@@ -19,7 +19,7 @@ list-style: none;
 gap: var(--space-0);
 
 & a {
-  padding: 0.25em 0.5em;
+  padding: 0.5em;
   text-decoration: none;
   /* letter-spacing: 0.5px; */
 
@@ -38,12 +38,13 @@ gap: var(--space-0);
     position: absolute;
     display: inline-block;
     inset: 0;
-    inline-size: 5px;
-    block-size: 5px;
+    inline-size: 0.4rem;
+    block-size: 0.4rem;
     border-radius: 100vh;
-    background-color: #fffd;
+    background-color: #fff;
     margin-inline: auto;
-    transform: translateY(-2px);
+    opacity: 0.8;
+    transform: translateY(1px);
   }
 }
 

@@ -12,6 +12,10 @@
   border-radius: 2px;
   position: relative;
 
+  & :where(h2, h3) + * {
+    /* margin-block-start: 0.5rem; */
+  }
+
   & + *::after {
     content: '';
     position: absolute;

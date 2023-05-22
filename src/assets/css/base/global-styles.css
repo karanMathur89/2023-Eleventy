@@ -73,8 +73,3 @@ a:hover {
   background: var(--color-dark);
   color: var(--color-light);
 }
-
-address, table {
-  margin: 0;
-  padding: 0;
-}
