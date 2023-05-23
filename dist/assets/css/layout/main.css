@@ -1,11 +1,11 @@
 .main {
 
-  & h2 {
+  & :where(h2) {
     text-align: center;
     margin-inline: auto;
   }
 
-  & .icon-large {
+  & :where(.icon-large) {
     margin-inline: auto;
     fill: var(--color-light);
     background-color: var(--color-primary);

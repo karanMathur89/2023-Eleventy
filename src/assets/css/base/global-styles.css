@@ -59,15 +59,6 @@ a:hover {
   text-decoration: none;
 }
 
-/* :focus {
-  outline: 3px solid;
-  outline-offset: 0.3ch;
-} */
-
-:target {
-  /* scroll-margin-top: 2ex; */
-}
-
 /* Base selection styles that invert whatever colours are rendered */
 ::selection {
   background: var(--color-dark);

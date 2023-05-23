@@ -8,8 +8,8 @@ module.exports = {
                 features: {
                     'logical-properties-and-values': false
                 }
-            })
+            }),
         // require('cssnano'),
-        // require('css-declaration-sorter')
+        require('css-declaration-sorter')
     ]
 }
