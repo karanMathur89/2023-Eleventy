@@ -9,7 +9,7 @@ module.exports = {
                     'logical-properties-and-values': false
                 }
             }),
-        // require('cssnano'),
+        require('cssnano'),
         require('css-declaration-sorter')
     ]
 }

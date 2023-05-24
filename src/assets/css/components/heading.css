@@ -37,24 +37,23 @@
 
 @keyframes fade-in {
   50% {
-    transform: translateY(-2px);
+    transform: translateY(-0.1rem);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0px);
   }
 }
 
 :where(h1) {
   font-weight: normal;
   text-shadow: 1px 1px 1px #0003;
-  opacity: 0;
+  opacity: 0.9;
   transform: translateY(1rem);
   animation-name: fade-in;
   animation-fill-mode: forwards;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
-  /* animation-delay: 0.1s; */
 }
 
 .main__header {

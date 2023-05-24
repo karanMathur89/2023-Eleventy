@@ -1,6 +1,6 @@
 const Image = require('@11ty/eleventy-img')
 
-const imageShortcode =  async (src, alt, sizes = "100vw") => {
+const imageShortcode =  async (src, alt, isHeroImage, sizes = "100vw") => {
 
   src = "src/assets/images/" + src;
 
@@ -14,7 +14,7 @@ const imageShortcode =  async (src, alt, sizes = "100vw") => {
   let imageAttributes = {
     alt,
     sizes,
-    loading: "lazy",
+    loading: isHeroImage ? "eager" : "lazy",
     decoding: "async",
   };
 

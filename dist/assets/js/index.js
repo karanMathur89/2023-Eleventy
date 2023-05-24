@@ -18,7 +18,7 @@ allIcons.forEach(icon => {
 //* STEP 4
 function beTouching(entries, observer) {
     entries.forEach(entry => {
-        console.log(entry.target.id, "Is Intersecting = ", entry.isIntersecting)
+        // console.log(entry.target.id, "Is Intersecting = ", entry.isIntersecting)
         if (entry.isIntersecting) {
             entry.target.classList.add('active')
             observer.unobserve(entry.target) //to stop observing to save system resources
