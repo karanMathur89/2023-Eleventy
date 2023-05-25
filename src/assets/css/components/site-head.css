@@ -19,12 +19,14 @@ list-style: none;
 gap: var(--space-0);
 
 & a {
+  display: inline-block;
   padding: 0.5em;
   text-decoration: none;
-  /* letter-spacing: 0.5px; */
+  transition: background-color 0.1s ease-out;
+  border-radius: 3px;
 
   &:where(:hover, :focus-visible) {
-    background-color: #0001;
+    background-color: hsla(210, 20%, 10%, 0.2);
   }
 
 }

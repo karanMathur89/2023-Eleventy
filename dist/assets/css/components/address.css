@@ -1,17 +1,17 @@
 .address {
-  /* outline: 1px solid; */
   font-style: normal;
   width: fit-content;
   margin-inline: auto;
-  font-size: var(--step-0);
-  font-weight: 600;
+  font-size: var(--step-1);
   padding-inline: var(--space-1);
   padding-block: var(--space-2);
   background-color: hsl(210, 10%, 96%);
   border-block: var(--space-0) solid var(--color-primary);
   border-radius: 3px;
   box-shadow: 0 0 4px 1px #0001;
-
+  /*! Fix for border color mismatch with okLCH in Chrome */
+  /* filter: hue-rotate(10deg) saturate(1.05); */
+  
   @media (prefers-color-scheme: dark) {
     background-color: hsl(210, 10%, 5%);
   }
@@ -20,7 +20,7 @@
 .mail span,
 .tel span {
   display: inline-block;
-  opacity: 0.8;
+  opacity: 0.7;
   min-inline-size: 6ch;
 }
 

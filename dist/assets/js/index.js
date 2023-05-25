@@ -1,4 +1,5 @@
 const allIcons = document.querySelectorAll('.process svg');
+const processItems = document.querySelectorAll('.process li');
 
 //* STEP 1
 const options = {
@@ -8,11 +9,16 @@ const options = {
 }
 
 //* STEP 2
-const observer = new IntersectionObserver(beTouching, options);
+const observerIcons = new IntersectionObserver(beTouching, options);
+const observerItems = new IntersectionObserver(beTouching, options);
 
 //* STEP 3
 allIcons.forEach(icon => {
-    observer.observe(icon);
+    observerIcons.observe(icon);
+})
+
+processItems.forEach(item => {
+    observerItems.observe(item)
 })
 
 //* STEP 4
