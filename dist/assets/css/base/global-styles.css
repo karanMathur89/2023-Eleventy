@@ -18,7 +18,7 @@ body {
 h1,
 h2,
 h3 {
-  max-inline-size: var(--size-content-2);
+  /* max-inline-size: var(--size-content-2); */
   line-height: 1.1;
   /* font-family: 'Merriweather'; */
 }
