@@ -7,10 +7,6 @@
 .site-head {
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.5rem;
-  border-radius: 3px;
-  background-color: hsl(0 0% 10% / 0.2);
-  backdrop-filter: blur(10px);
 }
 
 .logo {

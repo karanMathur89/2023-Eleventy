@@ -5,5 +5,8 @@
   position: absolute;
   inline-size: 100%;
   z-index: 1;
-  top: var(--space-1);
+  top: 0;
+  padding-block: var(--space-1) var(--space-0);
+  background-image: linear-gradient(to bottom, transparent, hsl(0 0% 10% / 0.1));
+  /* backdrop-filter: blur(20px); */
 }
