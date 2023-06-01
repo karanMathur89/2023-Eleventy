@@ -6,7 +6,7 @@
   padding-inline: var(--space-1);
   padding-block: var(--space-2);
   background-color: hsl(210, 10%, 96%);
-  border-block: var(--space-0) solid var(--color-primary);
+  border-inline: calc(var(--space-0) / 2) solid var(--color-primary);
   border-radius: 3px;
   box-shadow: 0 0 4px 1px #0001;
   /*! Fix for border color mismatch with okLCH in Chrome */
