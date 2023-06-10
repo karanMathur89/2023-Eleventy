@@ -35,7 +35,7 @@
   --grey-6: oklch(55% 0.01 var(--hue-grey));
   --grey-7: oklch(45% 0.01 var(--hue-grey));
   --grey-8: oklch(30% 0.01 var(--hue-grey));
-  --grey-9: oklch(24% 0.01 var(--hue-grey));
+  --grey-9: oklch(25% 0.01 var(--hue-grey));
   --grey-10: oklch(22% 0.01 var(--hue-grey));
 
   --hue: 230;
@@ -53,13 +53,13 @@
 
   @media (color-gamut: p3) {
     /* safe to use p3 colors */
-    --hue: 165;
+    --hue: 168;
     --clr-1: oklch(99% 0.02 var(--hue));
     --clr-2: oklch(90% 0.07 var(--hue));
     --clr-3: oklch(80% 0.12 var(--hue));
     --clr-4: oklch(72% 0.12 var(--hue));
     --clr-5: oklch(67% 0.12 var(--hue));
-    --clr-6: oklch(50% 0.142 var(--hue));
+    --clr-6: oklch(48% 0.13 var(--hue));
     --clr-7: oklch(42% 0.12 var(--hue));
     --clr-8: oklch(36% 0.1 var(--hue));
     --clr-9: oklch(27% 0.077 var(--hue));
@@ -88,7 +88,7 @@
   --color-bg-3-dark: var(--grey-8);
 
   --color-border-light: oklch(89% 0.01 var(--hue-grey));
-  --color-border-dark: oklch(27% 0.01 var(--hue-grey));
+  --color-border-dark: oklch(28% 0.01 var(--hue-grey));
 
   --color-primary: var(--color-primary-light);
   --color-text: var(--color-text-light);
