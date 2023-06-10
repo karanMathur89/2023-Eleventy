@@ -21,11 +21,11 @@
   }
 
   & tbody tr:nth-child(odd) {
-    background-color: hsl(210 10% 50% / 0.2);
+    background-color: hsl(210 10% 50% / 0.1);
   }
 
   & tbody tr:nth-child(even) {
-    background-color: hsl(210 10% 50% / 0.3);
+    background-color: hsl(210 10% 50% / 0.2);
   }
 
   & tbody td {
