@@ -2,6 +2,8 @@
   inline-size: 100%;
   border-collapse: collapse;
   text-align: end;
+  border-radius: 4px;
+  overflow: hidden;
 
   & :where(td, th) {
     padding: var(--space-0);
@@ -12,6 +14,10 @@
 
   & :where(th) {
     padding-block-end: 0;
+    
+    &:nth-child(1) {
+      inline-size: 8ch;
+    }
   }
 
   & thead td {

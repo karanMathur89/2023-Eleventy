@@ -44,11 +44,11 @@ gap: var(--space-0);
     inline-size: 5px;
     block-size: 5px;
     border-radius: 100vh;
-    background-color: rgb(255, 227, 71);
+    background-color: var(--color-accent);
     margin-inline: auto;
     opacity: 0.8;
     top: 2px;
-    filter: drop-shadow(0 0 1px var(--color-accent))
+    /* filter: drop-shadow(0 0 1px var(--color-accent)) */
   }
 }
 

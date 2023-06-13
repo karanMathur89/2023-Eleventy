@@ -8,8 +8,8 @@
 
 .logo svg {
   fill: var(--color-light);
-  inline-size: 2em;
-  block-size: 2em;
+  inline-size: 3em;
+  block-size: 3em;
   fill: var(--color-accent);
-  filter: drop-shadow(0 0 4px var(--color-accent));
+  filter: drop-shadow(0 0 1px var(--color-accent));
 }

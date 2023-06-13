@@ -3,7 +3,7 @@
   width: fit-content;
   margin-inline: auto;
   padding-inline: var(--space-1);
-  padding-block: var(--space-2);
+  padding-block: var(--space-3);
   background-color: var(--color-bg-2);
   border-inline: calc(var(--space-0) / 2) solid var(--color-primary);
   border-radius: 3px;
@@ -16,8 +16,9 @@
 .mail span,
 .tel span {
   display: inline-block;
-  opacity: 0.7;
+  opacity: 0.8;
   min-inline-size: 6ch;
+  font-weight: bold;
 }
 
 :where(.mail, .tel) a {
@@ -26,5 +27,4 @@
   text-decoration-color: var(--color-text);
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
-  opacity: 0.9;
 }
