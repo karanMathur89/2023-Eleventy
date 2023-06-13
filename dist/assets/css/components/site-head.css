@@ -41,13 +41,14 @@ gap: var(--space-0);
     position: absolute;
     display: inline-block;
     inset: 0;
-    inline-size: 0.3rem;
-    block-size: 0.3rem;
+    inline-size: 5px;
+    block-size: 5px;
     border-radius: 100vh;
-    background-color: #fff;
+    background-color: rgb(255, 227, 71);
     margin-inline: auto;
     opacity: 0.8;
     top: 2px;
+    filter: drop-shadow(0 0 1px var(--color-accent))
   }
 }
 

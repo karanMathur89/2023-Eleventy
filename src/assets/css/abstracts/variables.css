@@ -91,6 +91,7 @@
   --color-border-dark: oklch(28% 0.01 var(--hue-grey));
 
   --color-primary: var(--color-primary-light);
+  --color-accent: hsl(50, 100%, 63%);
   --color-text: var(--color-text-light);
   --color-bg-1: var(--color-bg-1-light);
   --color-bg-1a: var(--color-bg-1a-light);

@@ -6,6 +6,6 @@
   z-index: 1;
   top: 0;
   padding-block: var(--space-0);
-  background-color: hsl(0 0% 0% / 0.1);
+  background-color: hsl(0 0% 100% / 0.05);
   backdrop-filter: blur(10px);
 }
