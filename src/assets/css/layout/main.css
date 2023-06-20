@@ -7,13 +7,13 @@
 
   & :where(.icon-large) {
     margin-inline: auto;
-    fill: var(--color-accent);
+    fill: var(--clr-3);
     background-color: var(--clr-7);
-    border: 2px solid var(--clr-8);
+    border: 1px solid var(--clr-8);
     border-radius: 100vh;
 
     @media (prefers-color-scheme: dark) {
-      border: 2px solid var(--clr-6);
+      border: 1px solid var(--clr-6);
     }
   }
 }
